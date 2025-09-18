@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/di.dart';
 import '../reviews/domain/review_repository.dart';
 import '../reviews/infrastructure/review_repository_isar.dart';
 import '../reviews/application/review_service.dart';

@@ -1,4 +1,3 @@
-import '../domain/reward.dart';
 import '../domain/reward_repository.dart';
 import '../../../core/utils/id.dart';
 

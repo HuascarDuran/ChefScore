@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/di.dart';
 import 'domain/order_repository.dart';
 import 'infrastructure/order_repository_isar.dart';
 import 'application/order_service.dart';

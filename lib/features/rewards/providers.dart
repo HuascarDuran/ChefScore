@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/di.dart';
 import 'domain/reward_repository.dart';
 import 'infrastructure/reward_repository_isar.dart';
 import 'application/reward_service.dart';

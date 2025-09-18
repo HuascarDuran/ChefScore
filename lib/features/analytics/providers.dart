@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/di.dart';
 import '../reviews/providers.dart';
 import 'application/stats_service.dart';
 import 'domain/stats_repository.dart';
