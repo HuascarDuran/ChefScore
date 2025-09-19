@@ -35,7 +35,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           if (loc == dashboardsRoute) {
             currentIndex = 0;
           } else if (loc.startsWith(feedRoute)) {
-            currentIndex = 0;
+            currentIndex = 1;
           } else if (loc.startsWith(reviewRoute)) {
             currentIndex = 2;
           } else if (loc.startsWith(couponsRoute)) {

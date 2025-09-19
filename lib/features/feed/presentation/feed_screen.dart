@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../application/feed_providers.dart';
 import 'widgets/review_tile.dart';
 
@@ -13,7 +14,7 @@ class FeedScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Comentarios'),
+        title: const Text('Mis comentarios'),
         actions: [
           IconButton(
             tooltip: 'Actualizar',
@@ -51,7 +52,14 @@ class FeedScreen extends ConsumerWidget {
           ),
           error: (e, _) => ListView(
             padding: const EdgeInsets.all(16),
-            children: const [ _ErrorBox(msg: 'No se pudieron cargar tus comentarios') ],
+            children: [
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Text('Error: $e'),
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -91,21 +99,6 @@ class _Shimmer extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Card(
       child: SizedBox(height: 110, child: Center(child: CircularProgressIndicator())),
-    );
-  }
-}
-
-class _ErrorBox extends StatelessWidget {
-  const _ErrorBox({required this.msg});
-  final String msg;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Text(msg),
-      ),
     );
   }
 }

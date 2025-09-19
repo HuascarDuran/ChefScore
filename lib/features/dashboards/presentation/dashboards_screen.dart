@@ -21,8 +21,16 @@ class DashboardsScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: Colors.white, // opcional, para evitar glitches visuales
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
+        child: RefreshIndicator(
+          onRefresh: () async {
+            ref.invalidate(dashboardDateRangeProvider);
+            ref.invalidate(kpisProvider);
+            ref.invalidate(topProductsProvider);
+            ref.invalidate(topBranchesProvider);
+            ref.invalidate(recentReviewsProvider);
+          },
+          child: CustomScrollView(
+            slivers: [
             const SliverAppBar(
               floating: true,
               backgroundColor: Colors.white,
@@ -121,7 +129,8 @@ class DashboardsScreen extends ConsumerWidget {
                 child: const RecentReviewsCard(),
               ),
             ),
-          ],
+            ],
+          ),
         ),
       ),
     );
