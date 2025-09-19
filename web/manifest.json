@@ -1,6 +1,6 @@
 {
-    "name": "chefscore",
-    "short_name": "chefscore",
+    "name": "pyct",
+    "short_name": "pyct",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

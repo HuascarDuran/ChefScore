@@ -1,24 +1,55 @@
 name: chefscore
-description: Restaurante · Reseñas y rewards
-publish_to: "none"
+description: "ChefScore — Reseñas, dashboards y cupones con Flutter + Supabase."
+publish_to: 'none'
+
+version: 1.0.0+1
 
 environment:
-  sdk: '>=3.4.0 <4.0.0'
+  sdk: ">=3.5.0 <4.0.0"
 
 dependencies:
+  flutter_secure_storage: ^9.0.0 
   flutter:
     sdk: flutter
+    
+
+  # Estado y navegación
   flutter_riverpod: ^2.5.1
-  shared_preferences: ^2.2.3
-  isar: ^3.1.0
-  isar_flutter_libs: ^3.1.0
-  path_provider: ^2.1.4
+  go_router: ^14.2.3
+
+  # Backend
+  supabase_flutter: ^2.5.8
+
+  # Dispositivo / utilidades
+  device_info_plus: ^11.0.0
+  equatable: ^2.0.5
+  intl: ^0.19.0
+  shared_preferences: ^2.3.2
+  uuid: ^4.5.1
+
+  # UI
+  cupertino_icons: ^1.0.8
+  fl_chart: ^0.68.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^2.4.9
-  isar_generator: ^3.1.0
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/chefscore_logo.jpeg
+    - assets/images/menu/cheeseburger.jpg
+    - assets/images/menu/coca.png
+    - assets/images/menu/fanta.jpg
+    - assets/images/menu/helado.jpg
+    - assets/images/menu/king_pollo.jpg
+    - assets/images/menu/long_chicken.jpg
+    - assets/images/menu/onion_rings.jpg
+    - assets/images/menu/papas.jpg
+    - assets/images/menu/rodeo.jpg
+    - assets/images/menu/sundae.jpg
+    - assets/images/menu/whopper_doble.jpg
+    - assets/images/menu/whopper.jpg
