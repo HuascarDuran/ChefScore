@@ -48,7 +48,7 @@ class KpiCards extends ConsumerWidget {
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: crossAxisCount,
-                mainAxisExtent: 130,
+                mainAxisExtent: 160,
                 crossAxisSpacing: 12,
                 mainAxisSpacing: 12,
               ),
@@ -70,7 +70,15 @@ class KpiCards extends ConsumerWidget {
                             if (item.icon != null)
                               Icon(item.icon, size: 20, color: Theme.of(context).colorScheme.primary),
                             const SizedBox(width: 8),
-                            Text(item.label, style: theme.bodyLarge),
+                            Expanded(
+                              child: Text(
+                                item.label,
+                                style: theme.bodyLarge,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                                softWrap: false,
+                              ),
+                            ),
                           ],
                         ),
                         const SizedBox(height: 10),
@@ -78,8 +86,9 @@ class KpiCards extends ConsumerWidget {
                           child: Text(
                             item.value,
                             style: theme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
+                            softWrap: true,
                             overflow: TextOverflow.ellipsis,
-                            maxLines: 3,
+                            maxLines: 4,
                           ),
                         ),
                       ],

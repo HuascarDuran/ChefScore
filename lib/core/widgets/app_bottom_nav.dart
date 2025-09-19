@@ -23,21 +23,21 @@ class AppBottomNav extends StatelessWidget {
           selectedIcon: Icon(Icons.insights),
           label: 'Dashboards',
         ),
-        /*NavigationDestination(
+        NavigationDestination(
           icon: Icon(Icons.chat_bubble_outline),
           selectedIcon: Icon(Icons.chat_bubble),
-          label: 'Tus opiniones',
-        ),*/
+          label: 'Comentarios',
+        ),
         NavigationDestination(
           icon: Icon(Icons.add_circle_outline),
           selectedIcon: Icon(Icons.add_circle),
           label: 'Reseñas',
         ),
-        /*NavigationDestination(
+        NavigationDestination(
           icon: Icon(Icons.card_giftcard_outlined),
           selectedIcon: Icon(Icons.card_giftcard),
           label: 'Cupones',
-        ),*/
+        ),
       ],
     );
   }
