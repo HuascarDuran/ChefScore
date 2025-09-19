@@ -1,5 +1,5 @@
 name: chefscore
-description: "ChefScore — Reseñas, dashboards y cupones con Flutter + Supabase."
+description: "ChefScore — Reseñas, dashboards."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -35,6 +35,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
@@ -53,3 +54,8 @@ flutter:
     - assets/images/menu/sundae.jpg
     - assets/images/menu/whopper_doble.jpg
     - assets/images/menu/whopper.jpg
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/chefscore_logo.jpeg"

@@ -35,7 +35,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           if (loc == dashboardsRoute) {
             currentIndex = 0;
           } else if (loc.startsWith(feedRoute)) {
-            currentIndex = 1;
+            currentIndex = 0;
           } else if (loc.startsWith(reviewRoute)) {
             currentIndex = 2;
           } else if (loc.startsWith(couponsRoute)) {
@@ -110,12 +110,12 @@ final appRouterProvider = Provider<GoRouter>((ref) {
               ),
             ],
           ),
-          /*GoRoute(
+          GoRoute(
             path: couponsRoute,
             name: 'coupons',
             pageBuilder: (context, state) =>
                 NoTransitionPage(child: const CouponsScreen()),
-          ),*/
+          ),
         ],
       ),
     ],
